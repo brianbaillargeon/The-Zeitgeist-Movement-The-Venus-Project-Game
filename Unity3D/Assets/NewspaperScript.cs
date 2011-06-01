@@ -44,7 +44,8 @@ public class NewspaperScript: MonoBehaviour {
 			RaycastHit rh;
 			if(Physics.Raycast(newspaper[i].transform.position,windDirection[i],out rh,windDirection[i].magnitude))
 			{
-				newspaper[i].transform.LookAt(rh.normal);
+				newspaper[i].transform.LookAt(newspaper[i].transform.position+rh.normal);
+				newspaper[i].transform.Rotate(90,0,0);
 			}
 			else
 			{
