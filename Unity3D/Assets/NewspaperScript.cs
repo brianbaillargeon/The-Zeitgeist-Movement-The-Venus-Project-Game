@@ -59,7 +59,7 @@ public class NewspaperScript: MonoBehaviour {
 			
 			if(Vector3.Distance(newspaper[i].transform.position,fpc.transform.position)>100)
 			{
-				newspaper[i].transform.Translate(-1*newspaper[i].transform.position+fpc.transform.position-windDirection[i].normalized*50,Space.World);
+				newspaper[i].transform.Translate(-1*newspaper[i].transform.position+fpc.transform.position+50*(new Vector3(2*Random.value-1,2*Random.value-1,2*Random.value-1)),Space.World);
 			}
 		}
 	}
